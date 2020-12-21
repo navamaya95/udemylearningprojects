@@ -1,0 +1,238 @@
+import random
+
+print("Welcome to Rock, Paper, Scissors!")
+choice = input("To play enter '0' for Rock, '1' for Paper, or '2' for Scissors\n")
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+choice = int(choice)
+com_choice = random.randint(0, 2)
+
+if choice == com_choice:
+  if choice == 0 and com_choice == 0:
+    print("You chose Rock")
+    print('''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+''')
+    print("\n")
+    print("Computer chose Rock")
+    print('''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+''')
+    print("DRAW!")
+    print("You and the Computer chose Rock")
+  elif choice == 1 and com_choice == 1:
+    print("You chose Paper")
+    print('''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+''')
+    print("Computer chose Paper")
+    print('''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+''')
+    print("DRAW!")
+    print("You and the Computer chose Paper")
+  elif choice == 2 and com_choice == 2:
+    print("You chose Scissors")
+    print('''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+''')
+    print("\n")
+    print("Computer chose Scissors")
+    print('''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+''')
+    print("DRAW!")
+    print("You and the Computer chose Scissors")
+  else:
+    print("Uhh....??")
+
+elif choice == 0 and com_choice == 1:
+  print("You chose Rock")
+  print('''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+''')
+  print("\n")
+  print("Computer chose Paper")
+  print('''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+''')
+  print("\nYOU LOOSE!")
+  print("Paper beats rock.")
+elif choice == 1 and com_choice == 0:
+  print("You chose Paper")
+  print('''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+''')
+  print("\n")
+  print("Computer chose Rock")
+  print('''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+''')
+  print("\nYOU WIN!!")
+  print("Paper beats rock.")
+elif choice == 0 and com_choice == 2:
+  print("You chose Rock")
+  print('''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+''')
+  print("\n")
+  print("Computer chose Scissors")
+  print('''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+''')
+  print("\nYOU WIN!!")
+  print("Rock beats Scissors.")
+elif choice == 2 and com_choice == 0:
+  print("You chose Scissors")
+  print('''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+''')
+  print("\n")
+  print("Computer chose Rock")
+  print('''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+''')
+  print("YOU LOOSE!")
+  print("Rock beats Scissors.")
+elif choice == 1 and com_choice == 2:
+  print("You chose Paper")
+  print('''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+''')
+  print("\n")
+  print("Computer chose Scissors")
+  print('''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+''')
+  print("\nYOU WIN!!")
+  print("Scissors beats Paper.")
+elif choice == 2 and com_choice == 1:
+  print("You chose Scissors")
+  print('''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+''')
+  print("\n")
+  print("Computer chose Paper")
+  print('''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+''')
+  print("\nYOU LOOSE!")
+  print("Scissors beats Paper.")
+else:
+  print("INVALID CHOICE: Exiting Game...")

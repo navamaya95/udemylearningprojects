@@ -30,73 +30,33 @@ scissors = '''
 ---.__(___)
 '''
 
+list_choices = [rock, paper, scissors]
+
 choice = int(choice)
 com_choice = random.randint(0, 2)
 
 if choice == com_choice:
   if choice == 0 and com_choice == 0:
     print("You chose Rock")
-    print('''
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-''')
+    print(list_choices[0])
     print("\n")
     print("Computer chose Rock")
-    print('''
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-''')
+    print(list_choices[0])
     print("DRAW!")
     print("You and the Computer chose Rock")
   elif choice == 1 and com_choice == 1:
     print("You chose Paper")
-    print('''
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-''')
+    print(list_choices[1])
     print("Computer chose Paper")
-    print('''
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-''')
+    print(list_choices[1])
     print("DRAW!")
     print("You and the Computer chose Paper")
   elif choice == 2 and com_choice == 2:
     print("You chose Scissors")
-    print('''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-''')
+    print(list_choices[2])
     print("\n")
     print("Computer chose Scissors")
-    print('''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-''')
+    print(list_choices[2])
     print("DRAW!")
     print("You and the Computer chose Scissors")
   else:
@@ -104,135 +64,51 @@ if choice == com_choice:
 
 elif choice == 0 and com_choice == 1:
   print("You chose Rock")
-  print('''
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-''')
+  print(list_choices[0])
   print("\n")
   print("Computer chose Paper")
-  print('''
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-''')
+  print(list_choices[1])
   print("\nYOU LOOSE!")
   print("Paper beats rock.")
 elif choice == 1 and com_choice == 0:
   print("You chose Paper")
-  print('''
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-''')
+  print(list_choices[1])
   print("\n")
   print("Computer chose Rock")
-  print('''
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-''')
+  print(list_choices[0])
   print("\nYOU WIN!!")
   print("Paper beats rock.")
 elif choice == 0 and com_choice == 2:
   print("You chose Rock")
-  print('''
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-''')
+  print(list_choices[0])
   print("\n")
   print("Computer chose Scissors")
-  print('''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-''')
+  print(list_choices[2])
   print("\nYOU WIN!!")
   print("Rock beats Scissors.")
 elif choice == 2 and com_choice == 0:
   print("You chose Scissors")
-  print('''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-''')
+  print(list_choices[2])
   print("\n")
   print("Computer chose Rock")
-  print('''
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-''')
+  print(list_choices[0])
   print("YOU LOOSE!")
   print("Rock beats Scissors.")
 elif choice == 1 and com_choice == 2:
   print("You chose Paper")
-  print('''
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-''')
+  print(list_choices[1])
   print("\n")
   print("Computer chose Scissors")
-  print('''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-''')
+  print(list_choices[2])
   print("\nYOU WIN!!")
   print("Scissors beats Paper.")
 elif choice == 2 and com_choice == 1:
   print("You chose Scissors")
-  print('''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-''')
+  print(list_choices[2])
   print("\n")
   print("Computer chose Paper")
-  print('''
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-''')
+  print(list_choices[1])
   print("\nYOU LOOSE!")
   print("Scissors beats Paper.")
 else:
-  print("INVALID CHOICE: Exiting Game...")
+  print("INVALID CHOICE: You Loose..")

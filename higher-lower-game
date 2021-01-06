@@ -1,0 +1,55 @@
+from random import randint
+from list import data
+from art import vs
+from art import logo
+from replit import clear
+
+#choosing random data
+def choose_item():
+  chosen = randint(0,49)
+  return chosen
+
+#compare
+def compare(guess,a_followers,b_followers):
+  if a_followers > b_followers:
+    return guess == "a"
+  else:
+    return guess == "b"
+
+def play_game():
+  print(logo)
+  score = 0
+  game = True
+  #choosing data A and B
+  a_element = choose_item()
+  b_element = choose_item()
+  
+
+  while game:
+    a_element = b_element
+    b_element = choose_item()
+
+    while a_element == b_element:
+      a_element = choose_item()
+
+    #Visible path of the game
+    print(f"Compare A: {data[a_element]['name']}, {data[a_element]['description']}, from {data[a_element]['country']}")
+    print(vs)
+    print(f"Compare B: {data[b_element]['name']}, {data[b_element]['description']}, from {data[b_element]['country']}")
+
+    guess = input("Who has more followers? Type 'A' or 'B': ").lower()
+
+    a_followers_count = data[a_element]["follower_count"]
+    b_followers_count = data[b_element]["follower_count"]
+    guess_check = compare(guess, a_followers_count,b_followers_count)
+
+    clear()
+    print(logo)
+    #Updating the score or ending the game.
+    if guess_check:
+      score += 1
+      print(f"You're correct! Current score: {score}.")
+    else:
+      game = False
+      print(f"Sorry, that's incorrect. Final score: {score}")
+play_game()
